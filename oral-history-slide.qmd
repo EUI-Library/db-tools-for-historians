@@ -1,0 +1,60 @@
+---
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    footer: "EUI Library · Prepared with AI assistance. Tool features change, so please check each tool's current documentation."
+    smaller: true
+    scrollable: true
+    link-external-newwindow: true
+    css: styles.css
+---
+
+## Oral history research {.smaller .scrollable}
+
+Recorded interviews: audio, video, transcripts and the consent that goes with them
+
+:::: {.columns}
+::: {.column width="50%"}
+**Record and edit audio**
+
+- [Audacity](https://www.audacityteam.org): free audio editor to trim, clean and convert recordings
+
+**Transcribe**
+
+- [noScribe](https://github.com/kaixxx/noScribe): free automatic transcription that runs on your own computer (based on Whisper), so recordings never leave your machine
+- [Whisper](https://github.com/openai/whisper): open-source speech recognition in many languages (more technical)
+- [oTranscribe](https://otranscribe.com): free browser tool for manual transcription with playback controls
+- [ELAN](https://archive.mpi.nl/tla/elan): time-aligned annotation of audio and video
+
+**Index and publish**
+
+- [OHMS](https://www.oralhistoryonline.org): link transcripts and keyword indexes to points in the recording
+- [Aviary](https://www.aviaryplatform.com): host searchable audio and video collections
+:::
+
+::: {.column width="50%"}
+**Analyse (code themes in interviews)**
+
+- [QualCoder](https://qualcoder.wordpress.com) and [Taguette](https://www.taguette.org): free qualitative coding tools
+- [NVivo](https://lumivero.com/products/nvivo/), [MAXQDA](https://www.maxqda.com), [ATLAS.ti](https://atlasti.com): commercial tools, often licensed by institutions
+
+**Archive and share**
+
+- [QDR – Qualitative Data Repository](https://qdr.syr.edu), [UK Data Service](https://ukdataservice.ac.uk), or an institutional repository, with access restrictions where needed
+
+**Ethics and good practice**
+
+- [Oral History Association principles](https://oralhistory.org/principles-and-best-practices-revised-2018/) and [Oral History Society](https://www.ohs.org.uk) guidance
+- Plan informed consent, GDPR compliance and anonymisation *before* recording
+
+::: {.callout-warning}
+## Check before you upload
+Interviews contain personal data. Ask your data protection office before sending recordings to an online transcription service.
+:::
+:::
+::::
+
+::: {.refs}
+**References:** Audacity <https://www.audacityteam.org> · noScribe <https://github.com/kaixxx/noScribe> · Whisper <https://github.com/openai/whisper> · oTranscribe <https://otranscribe.com> · ELAN <https://archive.mpi.nl/tla/elan> · OHMS <https://www.oralhistoryonline.org> · Aviary <https://www.aviaryplatform.com> · QualCoder <https://qualcoder.wordpress.com> · Taguette <https://www.taguette.org> · NVivo <https://lumivero.com/products/nvivo/> · MAXQDA <https://www.maxqda.com> · ATLAS.ti <https://atlasti.com> · QDR <https://qdr.syr.edu> · UK Data Service <https://ukdataservice.ac.uk> · Oral History Association <https://oralhistory.org/principles-and-best-practices-revised-2018/> · Oral History Society <https://www.ohs.org.uk>
+:::

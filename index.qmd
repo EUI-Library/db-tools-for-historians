@@ -1,0 +1,211 @@
+---
+title: '<br/>Data tools for Historians'
+subtitle: 'Focused on storage and DBs, but not only...'
+author: <strong>Simone Sacchi</strong><br /><a href="mailto:simone.sacchi@eui.eu">simone.sacchi@eui.eu</a>
+title-slide-attributes:
+  data-background-image: 'images/EUI-logo-acronym.svg'
+  data-background-size: '20%'
+  data-background-position: top 10% center
+  data-background-repeat: no-repeat
+format:
+  revealjs:
+    theme: 
+    - default
+    - custom.scss
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: images/EUI_logo.png
+    css: styles.css
+    footer: 'Data tools for Historians - Digital History WG - 2026-10-20'
+---
+
+# Before we start {style="text-align: center;" .center}
+
+## Cautionary note {.smaller}
+
+- Most of the tools are not provided and/or "officially supported" by the EUI
+- Tools have been verified by me, but I am also learning along the way with you
+
+**Full disclosure**
+
+ My search for tools has been complemented with an AI-based query with the following prompt: 
+ 
+ > "Act as a data expert supporting researchers at an academic institution. List research- and academic-oriented tools and platforms that can help store, manage, and query data of the following types: image collection, large CSVs, oral history and text corpora. The audience is historians who are approaching the use of digital tools in their research workflow, so do not assume expert technical expertise"
+ 
+## EUI tools {.smaller}
+
+The [EUI ICT Service](https://www.eui.eu/ServicesAndAdmin/ComputingService/Storage){target="_blank"} provides GDPR-compliant storage solutions:
+
+-  **Microsoft OneDrive for Business**
+-  **Microsoft SharePoint**
+-  **Network areas storage and shared folders** (being phased out)
+
+However: no **structured DB platform** is available on premise or as a provided cloud service
+
+::: {.callout-tip}
+We strongly advise to adopt more than one solution at the same time, following [3-2-1 backup rule](https://intranet.eui.eu/services-procedures/file-storage-file-backup-recovery){target="_blank"}
+:::
+
+## Cases for OneDrive (and SharePoint) {.smaller}
+
+General purpose cloud storage solution, valid for all files and GDPR compliant.
+
+- **Common case**: fully sync and backup from your computer
+  - Caveat: what is deleted locally is deleted remotely (when connected)<sup>*</sup>
+
+- **For extra security**: DO NOT sync, still backup (via web app)
+  - Keep a fully independent backup
+  - Use it in unsecure research contexts
+
+::: {.callout-tip}
+We strongly advise to use the EUI VPN when moving files over the Internet [VPN Remote Connection access service](https://intranet.eui.eu/services-procedures/vpn-remote-connection-access-service){target="_blank"}
+:::
+
+::: {.callout-note appearance="minimal"}
+<sup>*</sup>OneDrive still keeps deleted files in the cloud "bin" for 30 days.
+:::
+
+## Image collections {.smaller}
+
+Scans, photographs of archival documents, visual sources
+
+:::: {.columns}
+::: {.column width="50%"}
+**Store and describe**
+
+- [Tropy](https://tropy.org){target="_blank"}: organise and tag archive photos on your desktop. *Best first tool.*
+
+
+**For publishing on the web**
+
+The following are Open Source tools to be deployed on a server, so they require web hosting and a certain level of technical competences:
+
+- [Omeka S](https://omeka.org/s/){target="_blank"} / [Omeka Classic](https://omeka.org/classic/): describe and publish collections online
+- [Recogito](https://recogitostudio.org){target="_blank"}: image annotation.
+- [IIIF](https://iiif.io){target="_blank"} viewers: [Mirador](https://projectmirador.org){target="_blank"}, [Universal Viewer](https://universalviewer.io){target="_blank"}
+:::
+
+::: {.column width="50%"}
+**Bonus: transcribe and extract text**
+
+- [Transkribus](https://www.transkribus.org){target="_blank"}: handwritten and printed text recognition, trainable on historical scripts (Free tier, with subscription)
+- [eScriptorium](https://gitlab.com/scripta/escriptorium){target="_blank"}: Open Source alternative, can be deployed or you can join a community server. Developed by the Digital Humanities group at the École Pratique des Hautes Études (EPHE) and the ALMAnaCH at INRIA
+- [Tesseract](https://github.com/tesseract-ocr/tesseract){target="_blank"} via [OCRmyPDF](https://ocrmypdf.readthedocs.io){target="_blank"}: OCR for printed text
+:::
+::::
+
+## CSV files {.smaller}
+
+When Excel slows down or hits its limit (or just because text-based files are leaner to work with)
+
+:::: {.columns}
+::: {.column width="50%"}
+**Explore and clean (no coding)**
+
+- [OpenRefine](https://openrefine.org){target="_blank"}: fix spelling variants, standardise dates, reconcile names and places
+
+:::
+
+::: {.column width="50%"}
+**Query like a database**
+
+- [Heurist (@Huma-Num)](https://heurist.huma-num.fr/heurist/startup/){target="_blank"}: Hosted service, open to researchers 
+- [DuckDB](https://duckdb.org){target="_blank"}: very large CSVs on a normal laptop. Requires deployment
+:::
+::::
+
+**Analyse with code (when ready)**: [Jupyter Notebooks](https://jupyter.org){target="_blank"}, [R](https://www.r-project.org){target="_blank"} / [RStudio](https://posit.co/products/open-source/rstudio/){target="_blank"}, [Google Colab](https://colab.research.google.com){target="_blank"}
+
+**Visualise**: [Tableau](https://tableau.com){target="_blank"}, [RAWGraphs](https://www.rawgraphs.io){target="_blank"} (free tier, then subscription)
+
+::: {.callout-tip }
+## Start here
+Start with OpenRefine, then anything else.
+:::
+
+## Oral history and interviews {.smaller .scrollable}
+
+Recorded interviews: audio, video, transcripts and the consent that goes with them
+
+:::: {.columns}
+::: {.column width="50%"}
+**Record and edit audio**
+
+- [Audacity](https://www.audacityteam.org): free audio editor to trim, clean and convert recordings
+
+**Store**
+- OneDrive / External hard drives
+
+**Analyse (code themes in interviews)**
+ [MAXQDA](https://www.maxqda.com): available via ICT
+:::
+
+::: {.column width="50%"}
+**Transcribe**
+
+- [**aTrain**](https://github.com/JuergenFleiss/aTrain){target="_blank"}: tool for automatically transcribing speech recordings utilizing machine learning models without uploading any data. Developed by the Know-Center Graz.
+- [noScribe](https://github.com/kaixxx/noScribe): free automatic transcription that runs on your own computer (based on Whisper), so recordings never leave your machine
+
+:::
+::::
+
+::: {.callout-warning}
+## Check before you upload
+Always consider the sensitive and personal nature of interviews and comply with GDPR and data security best practices.
+:::
+
+## Cross-cutting tools {.smaller}
+
+Useful whatever your data type
+
+:::: {.columns}
+::: {.column width="50%"}
+**Track versions**
+
+- [GitHub](https://github.com) / [GitLab](https://gitlab.com): version control for code and small data files
+
+**Deposit and cite your data**
+
+- [Cadmus](link){target="_blank"}: the EUI Research Repository, also hosting orginal datasets produced at the EUI
+- But also: [Zenodo](https://zenodo.org){target="_blank"}, [OSF](https://osf.io){target="_blank"}, [Harvard Dataverse](https://dataverse.harvard){target="_blank"}
+:::
+::: {.column width="50%"}
+**Anonymisation and Pseudonimisation**
+
+- [**Amnesia**](https://amnesia.openaire.eu/){target="_blank"} (by OpenAIRE)
+- [**TextWash**](https://github.com/ben-aaron188/textwash){target="_blank"} (python code available on GithHub)
+
+**Encryption**
+
+- [VeraCrypt](https://veracrypt.io/){target="_blank"}
+- [Cryptomator](https://cryptomator.org/){target="_blank"}
+
+:::
+::::
+
+
+## Laerning opportunities {.smaller}
+
+- [The Programming Historian](https://programminghistorian.org)
+- [Library Carpentry](https://librarycarpentry.org), [Data Carpentry](https://datacarpentry.org), [Software Carpentry](https://software-carpentry.org): short hands-on workshops
+- Many more you may be aware of!!
+
+Federica Signoriello also sent me this:
+
+- [Studiolo 2026 - CSMBR](https://csmbr.fondazionecomel.org/events/studiolo-2026/) (2026 edition, look for an upcoming one)
+
+## Any question? {style="text-align: center;" .center background-image="/images/just_science_done_right.png" background-position="top right" background-repeat="no-repeat" background-size="15%" .smaller}
+
+::: {style="text-align: center; margin-top: 1em"}
+Simone Sacchi
+
+Research Data Librarian, EUI Library
+
+[simone.sacchi@eui.eu](mailto:simone.sacchi@eui.eu) | [resdata@eui.eu](mailto:resdata@eui.eu)
+
+[**EUI Library Research Data Guide**](https://eui.libguides.com/research-data-guide){data-preview-link="true"} - [**EUI Library Trainings**](https://www.eui.eu/events?u=lib){data-preview-link="true"}
+
+![](/images/eui_view.png){fig-align="center" width="60%"}
+:::
